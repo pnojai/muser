@@ -29,7 +29,7 @@ plot_mus_eeg <- function(mus_eeg) {
                 geom_line(aes(y = value)) +
                 facet_grid(variable ~ . ) +
                 xlab("Time (sec)") +
-                ylab("Muse Output (what units?)") +
+                ylab( expression(paste(mu, "Volts"))) +
                 ggtitle(mus_eeg[[2]])
         
 }
