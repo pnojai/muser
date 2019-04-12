@@ -1,4 +1,4 @@
-setwd("/media/sf_Computing/DataScience/Columbia/muse")
+setwd("/media/sf_Computing/DataScience/Columbia/muser")
 library(ggplot2)
 library(reshape2)
 data_loc <- "data"
