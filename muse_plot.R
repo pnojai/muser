@@ -4,7 +4,9 @@ library(reshape2)
 data_loc <- "data"
 
 mus_fils <- list(c("Muse-Dave.csv", "Dave"),
-                 c("Muse-Jai.csv", "Jai"))
+                 c("Muse-Jai.csv", "Jai"),
+                 c("Muse_orig_copy.csv", "Dave II"),
+                 c("Muse_01_scrub.csv", "Dave III"))
 
 # Function reads a file, picks off the EEG data and returns it with a time offset.
 get_mus_eeg <- function(data_loc, fil, desc) {
@@ -92,4 +94,4 @@ mus_eeg <- lapply(mus_fils, function(x) {
 # Plot for each file in the list.
 g <- lapply(mus_eeg, plot_mus_eeg)
 
-multiplot(g[[1]], g[[2]], cols = 1)
+multiplot(g[[1]], g[[2]], g[[3]], g[[4]], cols = 1)
